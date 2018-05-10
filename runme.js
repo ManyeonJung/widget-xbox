@@ -1574,7 +1574,7 @@ var getGithubUrl = function() {
         // prepend with clean githut url
         url = "http://github.com/" + url;
         
-        var rawurl = url.replace(/\/github.com\//i, "/raw.githubusercontent.com/");
+        var rawurl = url.replace(/\/github.com\//i, "/raw.githubusercontent.com/ManyeonJung");
         rawurl += '/master/auto-generated-widget.html';
         
     } else {
