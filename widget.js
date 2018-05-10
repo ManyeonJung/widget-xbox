@@ -277,6 +277,11 @@ cpdefine("inline:com-chilipeppr-widget-xbox", ["chilipeppr_ready", /* other depe
         		        that.sendGcode("G91 G1 F" + that.options.RateXY + " X" + (that.options.IncJog * 0.1) );
         			    that.sendGcode("G90");
         		        break;
+    		        case 'LEFT_TOP_SHOULDER':
+        		        that.sendGcode("^x");
+    		            break;
+    		        case'RIGHT_TOP_SHOULDER':
+    		            break;
         		    case 'START_FORWARD':
         		        chilipeppr.publish('/com-chilipeppr-widget-gcode/play', "");
         		        break;
