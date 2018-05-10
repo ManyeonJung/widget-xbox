@@ -1567,7 +1567,7 @@ var getGithubUrl = function() {
     if (stdout.match(/\.git/)) {
         
         // format is git@github.com:chilipeppr/widget-xbox.git
-        var re = /.*github.com:/i;
+        var re = /.*github.com/i;
         var url = stdout.replace(re, "");
         url = url.replace(/.git[\s\S]*$/i, ""); // remove end
         
