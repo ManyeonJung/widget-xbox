@@ -1564,7 +1564,7 @@ var getGithubUrl = function() {
     console.log("Got the following Github URL:", stdout);
     
     // see what format we got back
-    if (stdout.match(/ssh/)) {
+    if (stdout.match(/\.git/)) {
         
         // format is git@github.com:chilipeppr/widget-xbox.git
         var re = /.*github.com:/i;
@@ -1574,7 +1574,7 @@ var getGithubUrl = function() {
         // prepend with clean githut url
         url = "http://github.com/" + url;
         
-        var rawurl = url.replace(/s:\/\/github.com\//i, "s/raw.githubusercontent.com/");
+        var rawurl = url.replace(/\/github.com\//i, "/raw.githubusercontent.com/");
         rawurl += '/master/auto-generated-widget.html';
         
     } else {
@@ -1583,7 +1583,6 @@ var getGithubUrl = function() {
         // console.log("format has no .git in it");
         url = stdout;
         url = url.replace(/[\s]*$/i, ""); // remove end
-        url = url.replace(/.git[\s\S]*$/i, ""); // remove end
         // console.log(url);
         var rawurl = url.replace(/\/github.com\//i, "/raw.githubusercontent.com/");
         rawurl += '/master/auto-generated-widget.html';
