@@ -1583,6 +1583,7 @@ var getGithubUrl = function() {
         // console.log("format has no .git in it");
         url = stdout;
         url = url.replace(/[\s]*$/i, ""); // remove end
+        url = url.replace(/.git[\s\S]*$/i, ""); // remove end
         // console.log(url);
         var rawurl = url.replace(/\/github.com\//i, "/raw.githubusercontent.com/");
         rawurl += '/master/auto-generated-widget.html';
