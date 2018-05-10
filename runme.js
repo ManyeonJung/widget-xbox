@@ -1574,7 +1574,7 @@ var getGithubUrl = function() {
         // prepend with clean githut url
         url = "http://github.com/" + url;
         
-        var rawurl = url.replace(/\/github.com\//i, "s/raw.githubusercontent.com/");
+        var rawurl = url.replace(/\/github.com\//i, "/raw.githubusercontent.com/");
         rawurl += '/master/auto-generated-widget.html';
         
     } else {
@@ -1584,7 +1584,7 @@ var getGithubUrl = function() {
         url = stdout;
         url = url.replace(/[\s]*$/i, ""); // remove end
         // console.log(url);
-        var rawurl = url.replace(/\/github.com\//i, "/raw.githubusercontent.com/");
+        var rawurl = url.replace(/\/github.com\//i, "/raw.githubusercontent.com/ManyeonJung");
         rawurl += '/master/auto-generated-widget.html';
     }
     var ret = {
