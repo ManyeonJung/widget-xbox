@@ -1561,10 +1561,10 @@ var getGithubUrl = function() {
     var cmd = 'git config --get remote.origin.url';
     
     var stdout = childproc.execSync(cmd, { encoding: 'utf8' });
-    //console.log("Got the following Github URL:", stdout);
+    console.log("Got the following Github URL:", stdout);
     
     // see what format we got back
-    if (stdout.match(/\.git/)) {
+    if (stdout.match(/ssh/)) {
         
         // format is git@github.com:chilipeppr/widget-xbox.git
         var re = /.*github.com:/i;
